@@ -7,7 +7,7 @@ with open("config.json", "r") as common:
     config = json.load(common)
 
 chrome_options = Options()
-chrome_options.add_argument("--window-size=10000, 10000")
+chrome_options.add_argument("--start-maximized")
 driver = webdriver.Chrome(executable_path="bin/driver_" + config["operating_system"], chrome_options=chrome_options)
 
 for genre in config["genres"]:
